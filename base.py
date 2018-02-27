@@ -7,6 +7,10 @@ from http.client import HTTPConnection
 from ftplib import FTP_TLS
 from re import findall
 from winstr import *
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 def main():	
 	# путь до папки пользователя C:\Users\USERNAME\
