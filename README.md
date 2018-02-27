@@ -15,6 +15,6 @@ https://www.microsoft.com/en-us/download/details.aspx?id=44266
 
 Необходимо установить в python 27 эти библиотеки:
 
-pip install -r biblioteki.txt
+pip install -r biblio.txt
 
 Компиляция происходит через BUILDER.exe
